@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::apiResource('indicators', IndicatorController::class);
 
 Route::get('graphic', [IndicatorController::class, 'graphic']);
+

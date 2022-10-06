@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Indicator;
 
+use DB;
+
 class IndicatorController extends Controller
 {
     /**
@@ -105,8 +107,11 @@ class IndicatorController extends Controller
         return response()->json(['status' => 'success']);
     }
 
+    # Vista de grafica
     public function graphic(){
-        return view('graphic');
+
+        $indicators = Indicator::get();
+        return view('graphic', ["indicators" => json_encode($indicators)]);
     }
 }
 
