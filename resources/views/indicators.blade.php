@@ -230,7 +230,7 @@
         })
 
         /*
-            Creacion de registro
+            Creación de registro
         */
         function createIndicator()
         {
@@ -288,49 +288,49 @@
                     $("#save-indicator-btn").prop('disabled', false);
      
                     /*
-        show validation error
+                        Verificando errores
                     */
                     if (typeof response.responseJSON.errors !== 'undefined') 
                     {
-        let errors = response.responseJSON.errors;
-        let origenIndicadorValidation = "";
-        if (typeof errors.origenIndicador !== 'undefined') 
+                    let errors = response.responseJSON.errors;
+                    let origenIndicadorValidation = "";
+                    if (typeof errors.origenIndicador !== 'undefined') 
                         {
                             origenIndicadorValidation = '<li>' + errors.origenIndicador[0] + '</li>';
                         }
 
-        let tiempoIndicadorValidation = "";
-        if (typeof errors.tiempoIndicador !== 'undefined') 
+                        let tiempoIndicadorValidation = "";
+                        if (typeof errors.tiempoIndicador !== 'undefined') 
                         {
                             tiempoIndicadorValidation = '<li>' + errors.tiempoIndicador[0] + '</li>';
                         }
 
-        let fechaIndicadorValidation = "";
-        if (typeof errors.fechaIndicador !== 'undefined') 
+                        let fechaIndicadorValidation = "";
+                        if (typeof errors.fechaIndicador !== 'undefined') 
                         {
                             fechaIndicadorValidation = '<li>' + errors.fechaIndicador[0] + '</li>';
                         }
 
-        let valorIndicadorValidation = "";
-        if (typeof errors.valorIndicador !== 'undefined') 
+                        let valorIndicadorValidation = "";
+                        if (typeof errors.valorIndicador !== 'undefined') 
                         {
                             valorIndicadorValidation = '<li>' + errors.valorIndicador[0] + '</li>';
                         }
         
-        let unidadMedidaIndicadorValidation = "";
-        if (typeof errors.unidadMedidaIndicador !== 'undefined') 
+                        let unidadMedidaIndicadorValidation = "";
+                        if (typeof errors.unidadMedidaIndicador !== 'undefined') 
                         {
                             unidadMedidaIndicadorValidation = '<li>' + errors.unidadMedidaIndicador[0] + '</li>';
                         }
 
-        let ccodigoIndicadorValidation = "";
-        if (typeof errors.codigoIndicador !== 'undefined') 
+                        let ccodigoIndicadorValidation = "";
+                        if (typeof errors.codigoIndicador !== 'undefined') 
                         {
                             codigoIndicadorValidation = '<li>' + errors.codigoIndicador[0] + '</li>';
                         }
                         
                         let nombreIndicadorValidation = "";
-        if (typeof errors.nombreIndicador !== 'undefined') 
+                        if (typeof errors.nombreIndicador !== 'undefined') 
                         {
                             nombreIndicadorValidation = '<li>' + errors.nombreIndicador[0] + '</li>';
                         }
@@ -338,8 +338,8 @@
         let errorHtml = '<div class="alert alert-danger" role="alert">' +
             '<b>Validation Error!</b>' +
             '<ul>' + nombreIndicadorValidation + codigoIndicadorValidation + unidadMedidaIndicadorValidation + valorIndicadorValidation + fechaIndicadorValidation + tiempoIndicadorValidation + origenIndicadorValidation + '</ul>' +
-        '</div>';
-        $("#error-div").html(errorHtml);
+            '</div>';
+            $("#error-div").html(errorHtml);
     }
                 }
             });
@@ -414,52 +414,52 @@
                 },
                 error: function(response) {
                     /*
-        show validation error
+                        Verificando errores
                     */
                     $("#save-indicator-btn").prop('disabled', false);
                     if (typeof response.responseJSON.errors !== 'undefined') 
                     {
                         console.log(response)
-        let errors = response.responseJSON.errors;
+                         let errors = response.responseJSON.errors;
 
-        let origenIndicadorValidation = "";
-        if (typeof errors.origenIndicador !== 'undefined') 
+                        let origenIndicadorValidation = "";
+                        if (typeof errors.origenIndicador !== 'undefined') 
                         {
                             origenIndicadorValidation = '<li>' + errors.origenIndicador[0] + '</li>';
                         }
 
-        let tiempoIndicadorValidation = "";
-        if (typeof errors.tiempoIndicador !== 'undefined') 
+                        let tiempoIndicadorValidation = "";
+                        if (typeof errors.tiempoIndicador !== 'undefined') 
                         {
                             tiempoIndicadorValidation = '<li>' + errors.tiempoIndicador[0] + '</li>';
                         }
 
-        let fechaIndicadorValidation = "";
-        if (typeof errors.fechaIndicador !== 'undefined') 
+                        let fechaIndicadorValidation = "";
+                        if (typeof errors.fechaIndicador !== 'undefined') 
                         {
                             fechaIndicadorValidation = '<li>' + errors.fechaIndicador[0] + '</li>';
                         }
 
-        let valorIndicadorValidation = "";
-        if (typeof errors.valorIndicador !== 'undefined') 
+                        let valorIndicadorValidation = "";
+                        if (typeof errors.valorIndicador !== 'undefined') 
                         {
                             valorIndicadorValidation = '<li>' + errors.valorIndicador[0] + '</li>';
                         }
 
-        let unidadMedidaIndicadorValidation = "";
-        if (typeof errors.unidadMedidaIndicador !== 'undefined') 
+                        let unidadMedidaIndicadorValidation = "";
+                        if (typeof errors.unidadMedidaIndicador !== 'undefined') 
                         {
                             unidadMedidaIndicadorValidation = '<li>' + errors.unidadMedidaIndicador[0] + '</li>';
                         }
 
-        let codigoIndicadorValidation = "";
-        if (typeof errors.codigoIndicador !== 'undefined') 
+                        let codigoIndicadorValidation = "";
+                        if (typeof errors.codigoIndicador !== 'undefined') 
                         {
                             codigoIndicadorValidation = '<li>' + errors.codigoIndicador[0] + '</li>';
                         }
 
                         let nombreIndicadorValidation = "";
-        if (typeof errors.nombreIndicador !== 'undefined') 
+                        if (typeof errors.nombreIndicador !== 'undefined') 
                         {
                             nombreIndicadorValidation = '<li>' + errors.nombreIndicador[0] + '</li>';
                         }
@@ -467,15 +467,15 @@
         let errorHtml = '<div class="alert alert-danger" role="alert">' +
             '<b>Validation Error!</b>' +
             '<ul>' + nombreIndicadorValidation + codigoIndicadorValidation + unidadMedidaIndicadorValidation + valorIndicadorValidation + fechaIndicadorValidation + tiempoIndicadorValidation + origenIndicadorValidation + '</ul>' +
-        '</div>';
-        $("#error-div").html(errorHtml);        
-    }
+            '</div>';
+            $("#error-div").html(errorHtml);
+        }
                 }
             });
         }
 
         /*
-            Visualizar informacion
+            Visualizar información
         */
         function showIndicator(id)
         {
@@ -493,13 +493,13 @@
                 success: function(response) {
                     let indicator = response.indicator;
                     $("#nombreIndicador-info").html(indicator.nombreIndicador);
-    $("#codigoIndicador-info").html(indicator.codigoIndicador);
-    $("#unidadMedidaIndicador-info").html(indicator.unidadMedidaIndicador);
-    $("#valorIndicador-info").html(indicator.valorIndicador);
-    $("#fechaIndicador-info").html(indicator.fechaIndicador);
-    $("#tiempoIndicador-info").html(indicator.tiempoIndicador);
-    $("#origenIndicador-info").html(indicator.origenIndicador);
-    $("#view-modal").modal('show'); 
+                    $("#codigoIndicador-info").html(indicator.codigoIndicador);
+                    $("#unidadMedidaIndicador-info").html(indicator.unidadMedidaIndicador);
+                    $("#valorIndicador-info").html(indicator.valorIndicador);
+                    $("#fechaIndicador-info").html(indicator.fechaIndicador);
+                    $("#tiempoIndicador-info").html(indicator.tiempoIndicador);
+                    $("#origenIndicador-info").html(indicator.origenIndicador);
+                    $("#view-modal").modal('show'); 
      
                 },
                 error: function(response) {
